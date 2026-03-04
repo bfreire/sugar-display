@@ -1,0 +1,10 @@
+services:
+  sugar-display:
+    build: .
+    container_name: sugar-display
+    environment:
+      NIGHTSCOUT_UPSTREAM: ${NIGHTSCOUT_UPSTREAM:-https://nightscout.server}
+      NIGHTSCOUT_API_SECRET: ${NIGHTSCOUT_API_SECRET:-}
+    ports:
+      - "8080:80"
+    restart: unless-stopped

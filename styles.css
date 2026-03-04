@@ -1,0 +1,70 @@
+:root {
+  --page-bg: #000000;
+  --display-bg: #050505;
+  --meta-color: #dedede;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Courier New", monospace;
+  background: var(--page-bg);
+  display: grid;
+  place-items: center;
+}
+
+.stage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(6px, 1.4vh, 14px);
+  padding: clamp(4px, 1vw, 10px);
+}
+
+.display-shell {
+  width: min(99vw, calc(90vh * 4));
+  height: min(90vh, calc(99vw / 4));
+  border-radius: clamp(6px, 0.8vw, 12px);
+  background: linear-gradient(180deg, #0f0f0f 0%, var(--display-bg) 100%);
+  padding: clamp(4px, 0.7vw, 10px);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    inset 0 0 42px rgba(0, 0, 0, 0.82);
+}
+
+#matrixCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.status-bar {
+  display: flex;
+  gap: clamp(10px, 1.8vw, 24px);
+  font-size: clamp(14px, 1.6vw, 28px);
+  color: var(--meta-color);
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.05em;
+}
+
+@media (orientation: portrait) {
+  .display-shell {
+    width: min(99vw, calc(74vh * 2));
+    height: min(74vh, calc(99vw / 2));
+  }
+}

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sugar Display</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <section class="display-shell" aria-label="Sugar display panel">
+        <canvas id="matrixCanvas" aria-label="Pixel glucose display"></canvas>
+      </section>
+      <div class="status-bar">
+        <span id="unitsLabel">mg/dL</span>
+        <span id="emojiLabel">❤️</span>
+        <span id="lastUpdated">Waiting for data...</span>
+      </div>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
