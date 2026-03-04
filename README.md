@@ -2,6 +2,8 @@
 
 Simple fullscreen glucose display for an old iPad desk screen.
 
+![Sugar Display Screenshot](assets/screenshot.png)
+
 ## Features
 - Pixel-like large display
 - Left emoji status icon
